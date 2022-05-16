@@ -1,0 +1,157 @@
+#include "ui/menudef.h"
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+#include "ui_mp/spray_common.inc"	
+
+menuDef
+	{
+		name			"viewModels"
+		rect			10 30 640 480
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		3
+		onClose
+		{
+		}
+
+		onEsc
+		{
+			close self;
+		}
+		////////////////////////////////////////////////////////////////////////////////////
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-340 -210 660 370 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			backcolor		0 0 0 0.7
+			visible			1
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-340 -210 660 25 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			backcolor		0 0 0 0.6
+			visible			1
+		}
+        itemDef
+        {
+			visible			1
+			origin		    -5 50
+			forecolor		0.95 0.95 0.95 1
+			exp				text( "Select the skin you want by pressing on the icon.")
+			textfont		UI_FONT_NORMAL
+			textalign		ITEM_ALIGN_LEFT
+			textscale		0.3
+			decoration
+		}
+
+		CHARACTER( 0, 0, 41 ) 
+		CHARACTER( 1, 0, 42 )
+		CHARACTER( 2, 0, 43 )
+		CHARACTER( 3, 0, 44 )
+        CHARACTER( 4, 0, 45 )
+		CHARACTER( 5, 0, 46 )
+		CHARACTER( 6, 0, 47 )
+        CHARACTER( 0, 1, 48 ) 
+		CHARACTER( 1, 1, 49 )
+		CHARACTER( 2, 1, 50 )		
+		CHARACTER( 3, 1, 51 )
+		CHARACTER( 4, 1, 52 )
+		CHARACTER( 5, 1, 53 )
+		CHARACTER( 6, 1, 54 )
+		CHARACTER( 0, 2, 55 )
+		CHARACTER( 1, 2, 56 )
+		CHARACTER( 2, 2, 57 )
+		CHARACTER( 3, 2, 58 )
+		CHARACTER( 4, 2, 59 )
+		CHARACTER( 5, 2, 60 )		
+		
+		itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-340 -40 660 25 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			backcolor		0 0 0 0.6
+ 			visible			0	
+		}
+
+		itemDef
+		{
+			rect 			-340 88 660 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 0.4
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			visible			1
+			origin		    65 343
+			forecolor		0.95 0.95 0.95 1 
+			exp				text( "Selected Skin:^8 " + Stat(980))
+			textfont		UI_FONT_NORMAL
+			textalign		ITEM_ALIGN_LEFT
+			textscale		0.28
+			decoration
+		}
+		itemDef
+		{
+			rect 			-340 105.5 660 0.5 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0.2 0.3 0.9 0.8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			rect 			-340 106 660 37 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 0.7
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			rect 			-340 143 660 0.5 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0.2 0.3 0.9 0.8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			rect 			-340 143.5 660 17 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 0.4
+			visible			1
+			decoration
+		}
+		itemdef
+		{
+			rect			525 343 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		0.28
+			exp text        ("Your Rank:^8 "+int(tablelookup("mp/ranktable.csv",0,stat(252),14)))     
+			visible         1
+			decoration
+		}
+        itemdef
+		{
+			rect			-175 105 341 37 2 2 
+			style			0
+			backcolor			1 0.25 0.25 1 
+			visible			1
+			type			1
+			text			"^7Mod by Frames"
+			textscale			0.35
+			textstyle			1
+			textalign			1
+			textaligny			26
+            textfont		UI_FONT_NORMAL
+			onFocus
+			{
+					play "mouse_click" ;
+			}
+			decoration
+		}
+	}
