@@ -17,6 +17,9 @@ getGameTypeString( type )
 		case "dm":	
 			type = "Deathmatch";
 			break;
+		case "sr":
+			gtname = "Search & Rescue";
+			break;
 		case "cj":	
 			type = "CoDJumper";
 			break;

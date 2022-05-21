@@ -1109,7 +1109,7 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.25
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( ( ( "> ^7If you found any bugs or issues, report in our FB group" ) ) );
+            exp                       text ( ( ( "> ^7If you found any bugs or issues, report in our Discord" ) ) );
             visible when (dvarString(hud_ShowWinner) != "1")                         
             decoration                
         }

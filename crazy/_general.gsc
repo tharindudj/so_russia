@@ -14,6 +14,7 @@ init()
 	//thread crazy\playerstat::playerstat();
 
 	thread crazy\_geo::init();
+	thread frames\_spectator_list::init();
 
 	thread Rules();
 
@@ -258,7 +259,7 @@ Rules()
 		wait 1;
 		level.logoText fadeOverTime(1);
 		level.logoText.alpha = 1;
-		level.logoText setText("^3Visit For More details & Player's ^1screenshots^3 : www.so-russia.tk");
+		level.logoText setText("^3Visit our Discord https://discord.gg/4etcmpMvww");
 		wait 5;
 		level.logoText fadeOverTime(1);
 		level.logoText.alpha = 0;
@@ -286,7 +287,7 @@ Rules()
 		wait 1;
 		level.logoText fadeOverTime(1);
 		level.logoText.alpha = 1;
-		level.logoText setText("^7Like to join our team ^3please visit www.so-russia.tk");
+		level.logoText setText("^7Like to join our team ^3Join our Discord");
 		wait 5;
 		level.logoText fadeOverTime(1);
 		level.logoText.alpha = 0;

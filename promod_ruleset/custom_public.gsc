@@ -38,11 +38,24 @@ main()
 	setDvar( "scr_sd_numlives", 1 ); // [0->] (amount of lives)
 	setDvar( "scr_sd_planttime", 5 ); // [1->] (seconds)
 	setDvar( "scr_sd_playerrespawndelay", 0 ); // [0->] (seconds)
-	setDvar( "scr_sd_roundlimit", 24 ); // [0->] (points)
+	setDvar( "scr_sd_roundlimit", 1 ); // [0->] (points)
 	setDvar( "scr_sd_roundswitch", 6 ); // [0->] (points)
-	setDvar( "scr_sd_scorelimit", 13 ); // [0->] (points)
+	setDvar( "scr_sd_scorelimit", 1 ); // [0->] (points)
 	setDvar( "scr_sd_timelimit", 1.75 ); // [0->] (minutes)
 	setDvar( "scr_sd_waverespawndelay", 0 ); // [0->] (seconds)
+
+	// sr
+	setDvar( "scr_sr_bombtimer", 50 ); // [1->] (seconds)
+	setDvar( "scr_sr_defusetime", 5 ); // [1->] (seconds)
+	setDvar( "scr_sr_multibomb", 0 ); // [0-1] (everyone can plant)
+	setDvar( "scr_sr_numlives", 1 ); // [0->] (amount of lives)
+	setDvar( "scr_sr_planttime", 6 ); // [1->] (seconds)
+	setDvar( "scr_sr_playerrespawndelay", 0 ); // [0->] (seconds)
+	setDvar( "scr_sr_roundlimit", 24); // [0->] (points)
+	setDvar( "scr_sr_roundswitch", 6 ); // [0->] (points)
+	setDvar( "scr_sr_scorelimit", 13 ); // [0->] (points)
+	setDvar( "scr_sr_timelimit", 1.75 ); // [0->] (minutes)
+	setDvar( "scr_sr_waverespawndelay", 0 ); // [0->] (seconds)
 
 	// dom
 	setDvar( "scr_dom_numlives", 0 ); // [0->] (amount of lives)
@@ -251,7 +264,7 @@ main()
 	setDvar( "timescale", 1 );
 	
 	//JUMP
-	// setDvar( "jump_slowdownEnable" , 0 );
+	setDvar( "jump_slowdownEnable" , 0 );
 
 	// various	
 	setDvar( "g_disabledefcmdprefix", 1 );
@@ -284,7 +297,6 @@ main()
 	setDvar( "promod_mc_message_4", "^7Group : https://vk.com/sorussiacod4" );
 	setDvar( "promod_mc_message_5", "^7Server Owned : ^1|SO| ^7Russia" );
 	setDvar( "promod_mc_message_6", "^2Developed ^3By ^5Team EN" );
-	setDvar( "promod_mc_message_7", "^2View Screenshots from : ^1www.so-russia.tk/ss" );
-	//setDvar( "promod_mc_message_3", "<*nextmap*>" );
+	setDvar( "promod_mc_message_7", "<*nextmap*>" );
 	
 }

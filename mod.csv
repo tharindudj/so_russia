@@ -25,6 +25,7 @@ localize,weapon
 localize,pl
 localize,mpui
 localize,so
+localize,custom
 
 weapon,mp/throwingknife_mp
 weapon,mp/knife_mp
@@ -39,6 +40,7 @@ material,skull_hud
 material,flare
 material,sun_flare
 material,sun
+material,statusicon_afk
 
 fx,weather\lightning
 fx,weather\lightning_mp_farm
@@ -94,6 +96,7 @@ menufile,ui_mp\scriptmenus\dr_admin.menu
 menufile,ui_mp\scriptmenus\soutility.menu
 menufile,ui_mp\scriptmenus\viewModels.menu
 menufile,ui\error.menu
+menufile,ui_mp\mods.menu
 
 
 rawfile,promod\client.gsc
@@ -354,10 +357,12 @@ fx,spray/spray22
 fx,spray/spray23
 fx,spray/spray24
 
+fx,impacts/deathfx_frames
+
 
 material,hud_discord
 material,hud_website
-material,loading_logo
+material,loadbar_logo
 material,so_starting_in
 material,so_logo
 material,so_main_background

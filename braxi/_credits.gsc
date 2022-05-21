@@ -51,11 +51,11 @@ main()
 	wait 0.4;
 	thread showCredit( "_______________________________________", 2.7 );
 	wait 0.4;
-	thread showCredit( "^3For more information visit our website at...", 2.0 );
-	wait 0.4;
-	thread showCredit( "www.so-russia.tk", 1.9 );
-	wait 0.2;
-	thread showCredit( "______________", 2.5 );
+	//thread showCredit( "^3For more information visit our website at...", 2.0 );
+//	wait 0.4;
+	//thread showCredit( "www.so-russia.tk", 1.9 );
+	//wait 0.2;
+	//thread showCredit( "______________", 2.5 );
 	wait 0.3;
 	thread showCredit( "**", 2.5 );
 

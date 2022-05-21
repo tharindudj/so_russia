@@ -580,15 +580,12 @@ ToggleBinds()
 				duffman\_killcard::setDesign("default");
 			}
 		}
-	if( int(response) > 35 )
+	if( int(response) > 35 && int(response) < 67 )
 	{
 		character = int(response)-41;
-		//if( self maps\mp\gametypes\_rank::isCharacterUnlocked( character ) )
-		//{
 			self setStat( 980, character );
 			self setClientDvar( "drui_character", character );
 			self iprintln("You have selected skin: ^1"+character);
-		//}
 	}
 	}
 }

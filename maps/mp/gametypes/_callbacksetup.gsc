@@ -39,7 +39,7 @@ CodeCallback_StartGameType()
 	{
 		[[level.callbackStartGameType]]();
 
-		crazy\_hostname::init();
+		//crazy\_hostname::init();
 		
 		level.gametypestarted = true;
 	}

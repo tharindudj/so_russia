@@ -9,7 +9,7 @@ menuDef
 		rect			10 30 640 480
 		focuscolor		COLOR_FOCUSED
 		style			WINDOW_STYLE_EMPTY
-		blurWorld		3
+		blurWorld		7
 		onClose
 		{
 		}
@@ -64,7 +64,8 @@ menuDef
 		CHARACTER( 2, 2, 57 )
 		CHARACTER( 3, 2, 58 )
 		CHARACTER( 4, 2, 59 )
-		CHARACTER( 5, 2, 60 )		
+		CHARACTER( 5, 2, 60 )
+		CHARACTER( 6, 2, 61 )
 		
 		itemDef 
 		{

@@ -44,8 +44,9 @@
 		CHOICE_BUTTON_VIS( 3, "@MENU_CONTROLS", open main_controls;, when( !localvarBool( ui_hideBack ) ) )
 		CHOICE_BUTTON_VIS( 4, "@MENU_OPTIONS", open main_options;, when( !localvarBool( ui_hideBack ) ) )
 		CHOICE_SEPARATOR_VIS( CHOICE_SEP_2, when( !localvarBool( ui_hideBack ) ) )
-		CHOICE_BUTTON_VIS( 5, "@MENU_MODS", close self; open mods_menu;, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_VIS( 5, "@MENU_MODS", close main_text;  open mods_menu; soundloop "";, when( !localvarBool( ui_hideBack ) ) )
 		CHOICE_BUTTON_VIS( 6, "@MENU_QUIT", uiScript quit;, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_VIS( 7, "Add Favorite", open popup_addfavorite;, when( !localvarBool( ui_hideBack ) ) )
 
 	    /////////////////////////////////// Menu Edits ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 		itemDef
@@ -82,7 +83,7 @@
 		textscale 	0.26
 		textfont 	8
 		textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
-		text 		"SO Russia Promod by Frames.                                                                                                                                                                                                 Join our discord server: discord.gg/4etcmpMvww                                                                                                                                                                 Join our VK group vk.com/sorussiacod4                                                                                                                                                                 Mod by Frames#4095"
+		text 		"SO RUSSIA PROMOD.                                                                                                                                                                                                 Join our discord server: discord.gg/4etcmpMvww                                                                                                                                                                 Join our VK group vk.com/sorussiacod4                                                                                                                                                                 Mod by Frames#4095"
 		visible 	when( !localvarBool( ui_hideBack ) )
 		exp rect x ( 650 - ( ( float( milliseconds() % 20000 ) / 20000 ) * ( 2180 ) ) )
 		} 

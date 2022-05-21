@@ -108,7 +108,7 @@ init()
 	level._effect[ "snow_light" ]	 	= loadFX( "weather/snow_light_mp_bloc" );
 	level._effect[ "snow_wind" ]	 	= loadFX( "weather/snow_wind" );
 
-	level.d_effect = loadFX( "impacts/deathfx_dogbite" );
+	level.d_effect = loadFX( "impacts/deathfx_frames" );
 
 	if(!isDefined(game["tiebreaker"]))game["tiebreaker"]=false;
 	if(!isDefined(game["gamestarted"]))promod\modes::main();
@@ -132,6 +132,7 @@ init()
 	level thread AutoTeamsBalancer();
 	level thread code\main::init();
 	thread frames\_spray::init();
+	thread frames\_afkCheck::init();
 	buildCharacterInfo();
 }
 
@@ -1947,7 +1948,7 @@ prematchPeriod()
 	level endon("game_ended");
 	if(level.prematchPeriod>0&&isDefined(game["PROMOD_MATCH_MODE"])&&game["PROMOD_MATCH_MODE"]!="match"&&game["PROMOD_MATCH_MODE"]!="strat")
 	{
-		if(getDvarInt("promod_allow_strattime")&&isDefined(game["CUSTOM_MODE"])&&game["CUSTOM_MODE"]&&level.gametype=="sd")matchStartTimerSkip();
+		if(getDvarInt("promod_allow_strattime")&&isDefined(game["CUSTOM_MODE"])&&game["CUSTOM_MODE"]&&(level.gametype=="sd"||level.gametype=="sr"))matchStartTimerSkip();
 		else matchStartTimer();
 	}
 	else matchStartTimerSkip();
@@ -2701,7 +2702,7 @@ Callback_PlayerKilled(eInflictor,attacker,iDamage,sMeansOfDeath,sWeapon,vDir,sHi
 	{
 		body thread delayBloodPool();
 		PlayFX( level.fx_money, self.origin );
-	//	playFx( level.d_effect, self.origin );
+		playFx( level.d_effect, self.origin );
 	}
 	if(!isDefined(self.isKnifing))
 	{

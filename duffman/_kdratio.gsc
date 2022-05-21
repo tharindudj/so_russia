@@ -43,17 +43,22 @@ init()
 					players[i].hudheadshots thread FadeOut(1);
 				if(isDefined(players[i].countedFPS))
 					players[i].countedFPS thread FadeOut(1);
+				if(isDefined(players[i].mc_rsc ))
+					players[i].mc_rsc thread FadeOut(1);
 				
 			}
 		}				
 	}
 }
 
-initStats() {
+initStats() 
+{
 	self.pers["shoots"] = 1;
 	self.pers["hits"] = 1;
 	if(!isDefined(self.pers["gottags"]))
 		self.pers["gottags"] = 0;
+	if(!isDefined(self.pers["rescues"]))
+		self.pers["rescues"] = 0;
 }
 
 ShowKDRatio()
@@ -72,6 +77,7 @@ ShowKDRatio()
 	if( IsDefined( self.hudscore ) )	self.hudscore Destroy();
 	if( IsDefined( self.hudheadshots ) )	self.hudheadshots Destroy();
 	if( IsDefined( self.countedFPS ) )	self.countedFPS Destroy();
+	if( IsDefined( self.mc_rsc ) )	self.mc_rsc  Destroy();
 	
 	//if( IsDefined( self.detailsBackground ) )	self.detailsBackground Destroy();
 	
@@ -255,6 +261,26 @@ ShowKDRatio()
 		self.mc_kc.glowcolor = (0.3, 0.3, 0.3);
 		self.mc_kc.glowalpha = 1;
 	}
+
+	if(level.gametype == "sr")
+		{
+			self.mc_rsc = NewClientHudElem(self);
+			self.mc_rsc.x = 120;
+			self.mc_rsc.y = -360;
+			self.mc_rsc.horzAlign = "left";
+			self.mc_rsc.vertAlign = "bottom";
+			self.mc_rsc.alignX = "left";
+			self.mc_rsc.alignY = "middle";
+			self.mc_rsc.alpha = 0;
+			self.mc_rsc.fontScale = 1.4;
+			self.mc_rsc.hidewheninmenu = true;
+			self.mc_rsc.label = &"Rescued tags:^8 &&1";
+			self.mc_rsc FadeOverTime(.5);
+			self.mc_rsc.alpha = 1;
+			self.mc_rsc.glowcolor = (0.7, 0.2, 0.2);
+			self.mc_rsc.glowalpha = 0.8;
+
+		}
 	
 	color = (0,0,0);
 	first = true;
@@ -297,6 +323,11 @@ ShowKDRatio()
 		self.countedFPS SetValue( f );
 		if(isdefined(self.cur_kill_streak)) self.mc_streak setValue(self.cur_kill_streak);
 		else self.mc_streak setValue(0);
+		if( level.gametype == "sr" )
+		{
+			if( IsDefined( self.mc_kc ) )self.mc_kc setValue( self.pers["gottags"] );
+			if( IsDefined( self.mc_rsc ) )self.mc_rsc setValue( self.pers["rescues"] );
+		}
 		if(level.gametype == "kc")
 			self.mc_kc setValue( self.pers["gottags"] );
 		self common_scripts\utility::waittill_any("disconnect","death","weapon_fired","weapon_change","player_killed");

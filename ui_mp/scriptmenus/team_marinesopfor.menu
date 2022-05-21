@@ -1380,7 +1380,7 @@
             textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
             textAlignX                -10
             textScale                 0.4
-            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            textStyle                 ITEM_TEXTSTYLE_BLINK
             action                    { play mouse_click ; play mouse_click ; scriptMenuResponse allies ; ;  }
             onFocus                   { play so_mouse_over ; setLocalVarInt ui_highlight 1 ; setLocalVarString ui_choicegroup  ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
@@ -1399,7 +1399,7 @@
             textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
             textAlignX                -10
             textScale                 0.4
-            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            textStyle                 ITEM_TEXTSTYLE_BLINK
             exp                       text ( ( "1^1. ^7Attack" ) );
             visible                   when ( ( team( "name" ) == "TEAM_ALLIES" && dvarint( "so_newUI" ) != 1 ) )
             decoration                
@@ -1445,7 +1445,7 @@
             textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
             textAlignX                -10
             textScale                 0.4
-            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            textStyle                 ITEM_TEXTSTYLE_BLINK
             action                    { play mouse_click ; play mouse_click ; scriptMenuResponse axis ; ;  }
             onFocus                   { play so_mouse_over ; setLocalVarInt ui_highlight 2 ; setLocalVarString ui_choicegroup  ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
@@ -1464,7 +1464,7 @@
             textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
             textAlignX                -10
             textScale                 0.4
-            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            textStyle                 ITEM_TEXTSTYLE_BLINK
             exp                       text ( ( "2^1. ^7Defence" ) );
             visible                   when ( ( team( "name" ) == "TEAM_AXIS" && dvarint( "so_newUI" ) != 1 ) )
             decoration                
@@ -1510,7 +1510,7 @@
             textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
             textAlignX                -10
             textScale                 0.4
-            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            textStyle                 ITEM_TEXTSTYLE_BLINK
             action                    { play mouse_click ; play mouse_click ; scriptMenuResponse autoassign ; ;  }
             onFocus                   { play so_mouse_over ; setLocalVarInt ui_highlight 3 ; setLocalVarString ui_choicegroup  ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
@@ -1558,7 +1558,7 @@
             textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
             textAlignX                -10
             textScale                 0.4
-            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            textStyle                 ITEM_TEXTSTYLE_BLINK
             action                    { play mouse_click ; play mouse_click ; scriptMenuResponse shoutcast ; ;  }
             onFocus                   { play so_mouse_over ; setLocalVarInt ui_highlight 4 ; setLocalVarString ui_choicegroup  ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
@@ -1577,7 +1577,7 @@
             textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
             textAlignX                -10
             textScale                 0.4
-            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            textStyle                 ITEM_TEXTSTYLE_BLINK
             exp                       text ( ( "4^1. ^7Shoutcaster" ) );
             visible                   when ( ( team( "name" ) == "TEAM_SPECTATOR" && dvarint( "so_newUI" ) != 1 ) )
             decoration                
@@ -1623,7 +1623,7 @@
             textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
             textAlignX                -10
             textScale                 0.4
-            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            textStyle                 ITEM_TEXTSTYLE_BLINK
             action                    { play mouse_click ; open popup_endgame ;  }
             onFocus                   { play so_mouse_over ; setLocalVarInt ui_highlight 5 ; setLocalVarString ui_choicegroup  ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
@@ -1652,7 +1652,7 @@
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.35
 			textalign	ITEM_ALIGN_CENTER
-			textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
+			textstyle	ITEM_TEXTSTYLE_BLINK
 			visible 	when ( ( dvarint( "so_newUI" ) == 1 ) )
 			decoration 
 		}
@@ -1713,7 +1713,7 @@
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.55
 			textalign	ITEM_ALIGN_CENTER
-			textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
+			textstyle	ITEM_TEXTSTYLE_BLINK
 			visible 	0 //when ( ( dvarint( "so_newUI" ) != 1 ) )
 			decoration 
 		}
@@ -1727,7 +1727,7 @@
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.24
 			textalign	ITEM_ALIGN_CENTER
-			textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
+			textstyle	ITEM_TEXTSTYLE_BLINK
 			visible 	when ( ( dvarint( "so_newUI" ) != 1 ) )
 			decoration 
 		}
@@ -1741,7 +1741,7 @@
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.16
 			textalign	ITEM_ALIGN_CENTER
-			textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
+			textstyle	ITEM_TEXTSTYLE_BLINK
 			visible 	when ( ( dvarint( "so_newUI" ) != 1 ) )
 			decoration 
 		}
@@ -1794,7 +1794,7 @@
 			textfont	UI_FONT_NORMAL
 			textscale	0.35
 			textalign	ITEM_ALIGN_LEFT
-			textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
+			textstyle	ITEM_TEXTSTYLE_BLINK
 			visible 	when ( ( dvarint( "so_newUI" ) != 1 ) )
 			decoration 
 		}

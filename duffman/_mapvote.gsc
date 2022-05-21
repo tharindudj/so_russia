@@ -322,6 +322,9 @@ getGameTypeString( gt ) {
 		case "koth":
 			gt = "(HQ)";
 			break;
+		case "sr":
+			gtname = "Search & Rescue";
+			break;
 		case "sab":
 			gt = "(SAB)";
 			break;			

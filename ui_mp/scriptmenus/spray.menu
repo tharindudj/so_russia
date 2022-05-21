@@ -1,39 +1,42 @@
 #include "ui/vc.inc"
 #include "ui/menudef.h"
+#include "ui_mp/spray_common.inc"
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
 menudef
 {
 	name			"spray"
-	rect			0 0 640 480
+	rect			10 30 640 480
 	visible			1
 	blurworld		7
 	onopen			{ focusFirst;exec "set cpage 3"; }
 	onEsc			{ close self; }
 	
-	itemdef
-	{
-		name			"window"
-		rect			-200 -210 400 410 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
-		style			WINDOW_STYLE_FILLED
-		border			1
-		bordercolor		0.65 0.65 0.65 1
-		backcolor		0 0 0 0.7
-		visible			1
-		decoration
-	}
-	itemdef
-	{
-		name			"topbar"
-		rect			-50 -210 400 30 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
-		style			WINDOW_STYLE_EMPTY
-		text			"^0Spray Menu"
-		textfont		UI_FONT_NORMAL
-		textaligny		27.5
-		textalignx		10
-		backcolor		0 0 0 0.7
-		forecolor		1 1 1 1
-		visible			1
-		decoration
-	}
+	itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-340 -210 660 370 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			backcolor		0 0 0 0.7
+			visible			1
+		}
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-340 -210 660 25 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			backcolor		0 0 0 0.6
+			visible			1
+		}
+        itemDef
+        {
+			visible			1
+			origin		    -5 50
+			forecolor		0.95 0.95 0.95 1
+			exp				text( "Select the spray you want by pressing on the icon.")
+			textfont		UI_FONT_NORMAL
+			textalign		ITEM_ALIGN_LEFT
+			textscale		0.3
+			decoration
+		}
 	
 	itemDef
 	{
@@ -86,6 +89,85 @@ menudef
 		dvarFloat                 "openscriptmenu vF spray" -1 -1 -1
 		visible 					1                 
 	}
+
+	itemDef 
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-340 -40 660 25 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			backcolor		0 0 0 0.6
+ 			visible			0	
+		}
+
+		itemDef
+		{
+			rect 			-340 88 660 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 0.4
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			rect 			-340 105.5 660 0.5 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0.2 0.3 0.9 0.8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			rect 			-340 106 660 37 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 0.7
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			rect 			-340 143 660 0.5 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0.2 0.3 0.9 0.8
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			rect 			-340 143.5 660 17 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			style			WINDOW_STYLE_FILLED
+			backcolor		0 0 0 0.4
+			visible			1
+			decoration
+		}
+		itemdef
+		{
+			rect			290 343 0 0
+			forecolor		1 1 1 1
+			textfont		UI_FONT_NORMAL
+			textscale		0.28
+			exp text        ("Your Rank:^8 "+int(tablelookup("mp/ranktable.csv",0,stat(252),14)))     
+			visible         1
+			decoration
+		}
+        itemdef
+		{
+			rect			-175 105 341 37 2 2 
+			style			0
+			backcolor			1 0.25 0.25 1 
+			visible			1
+			type			1
+			text			"^7Mod by Frames"
+			textscale			0.35
+			textstyle			1
+			textalign			1
+			textaligny			26
+            textfont		UI_FONT_NORMAL
+			onFocus
+			{
+					play "mouse_click" ;
+			}
+			decoration
+		}
 	
 	#define	SPRAY_BUT( row, col, num, resp )	\
 		itemDef	\
@@ -104,7 +186,7 @@ menudef
 			mouseEnter		{ play "so_mouse_over"; setcolor bordercolor VC_COLOR2 1; }	\
 			mouseExit		{ setcolor bordercolor VC_COLOR2 0.5; }	\
 		}
-
+ 
 	SPRAY_BUT( 0, 0,  0, spray_0  )
 	SPRAY_BUT( 0, 1,  1, spray_1  )
 	SPRAY_BUT( 0, 2,  2, spray_2  )

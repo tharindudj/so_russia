@@ -74,7 +74,7 @@ stratTime()
 	thread stratTimer();
 
 	level.strat_over = false;
-	strat_time_left = game["PROMOD_STRATTIME"] + level.prematchPeriod * int( getDvarInt( "promod_allow_strattime" ) && isDefined( game["CUSTOM_MODE"] ) && game["CUSTOM_MODE"] && level.gametype == "sd" );
+	strat_time_left = game["PROMOD_STRATTIME"] + level.prematchPeriod * int( getDvarInt( "promod_allow_strattime" ) && isDefined( game["CUSTOM_MODE"] ) && game["CUSTOM_MODE"] && (level.gametype=="sd"||level.gametype=="sr") );
 
 	while ( !level.strat_over )
 	{

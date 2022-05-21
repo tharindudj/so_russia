@@ -1617,8 +1617,8 @@
         onClose{onLeave;} \
         LOCAL_CAMO_INFO_WINDOW \
         LOCAL_CAMO_ITEM( 1, "1. None", REF_CAMO_NONE, 1 )\
-        LOCAL_CAMO_ITEM( 2, "2. ^6SO Camo#1", REF_BROCKHUARD, 1 )\
-        LOCAL_CAMO_ITEM( 3, "3. ^2SO Camo#2", REF_BUSHDWELLER,  1 )\
+        LOCAL_CAMO_ITEM( 2, "2. ^6SO Camo#1", REF_BUSHDWELLER, 1 )\
+        LOCAL_CAMO_ITEM( 3, "3. ^2SO Camo#2", REF_BROCKHUARD,  1 )\
         LOCAL_CAMO_ITEM( 4, "4. ^3SO Camo#3", REF_BLACKWHITEMARPAT,  1 )\
         LOCAL_CAMO_ITEM( 5, "5. ^1SO Camo#4", REF_TIGERRED,  1 )\
         LOCAL_CAMO_ITEM( 6, "6. ^4SO Camo#5", REF_STAGGER, 1 )\

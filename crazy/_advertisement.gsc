@@ -16,7 +16,7 @@ advertisement()
 	while(1)
 	{
 	
-		level hudmsg("^2^3[SL^2e^3S] ^0- ^3Sri Lanka");
+		level hudmsg("^2SO RUSSIA");
 	
 		wait level.delay;
 	
@@ -24,19 +24,19 @@ advertisement()
 	
 		//wait level.delay;
 	
-		level hudmsg("^3Visit Our Web Site ^2: ^8so-russia.tk");
+//		level hudmsg("^3Visit Our Web Site ^2: ^8so-russia.tk");
+		
+//		wait level.delay;
+		
+		level hudmsg("^2Join our ^4Discord");
 		
 		wait level.delay;
 		
-		level hudmsg("^2Join our ^4FB ^2Group ^0: ^3www.fb.com/callofdoggy/");
+		level hudmsg("^3SO Russia Gaming");
 		
 		wait level.delay;
 		
-		level hudmsg("^3Sri Lanka's No.1 Online Gaming Community");
-		
-		wait level.delay;
-		
-		level hudmsg("^3Server developed by ^0: ^7 [SL^1e^7SPORT]");
+		level hudmsg("^3Server developed by ^0: ^7 Early NoOBs");
 		
 		wait level.delay;
 		
