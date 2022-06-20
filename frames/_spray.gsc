@@ -1,7 +1,7 @@
 /*
- *	Script By 
+ *	Script By
  *	Zoro
- *	
+ *
  *	Discord: Zoro#6191
  */
 
@@ -17,7 +17,7 @@ buildSprayInfo()
 {
 	level.sprayInfo = [];
 	level.numSprays = 0;
-	
+
 	tableName = "mp/sprayTable.csv";
 
 	for( idx = 1; isdefined( tableLookup( tableName, 0, idx, 0 ) ) && tableLookup( tableName, 0, idx, 0 ) != ""; idx++ )
@@ -40,7 +40,7 @@ onPlayerConnect()
 onMenuResponse()
 {
 	self endon("disconnect");
-	
+
 	for(;;)
 	{
 		self waittill("menuresponse", menu, response);
@@ -76,7 +76,7 @@ onMenuResponse()
 				self setclientdvar("sprayimg", "spray"+num+"_menu");
 				self setstat(61, int(strTok(response, "_")[1]) );
 				break;
-				
+
 			case "spray":
 				self thread sprayIt();
 				break;
@@ -86,8 +86,10 @@ onMenuResponse()
 
 sprayIt()
 {
-	if(!isDefined hasSprayed) hasSprayed = false;
 	self endon( "disconnect" );
+	if(!isDefined(self.hasSprayed)) {
+		self.hasSprayed = false;
+	}
 
 	if(self.hasSprayed) return self iprintlnbold("You have already sprayed. wait 7s to spray again.");
 
@@ -95,19 +97,19 @@ sprayIt()
 	eye = self getTagOrigin( "j_head" );
 	forward = eye + vector_scale( anglesToForward( angles ), 70 );
 	trace = bulletTrace( eye, forward, false, self );
-	
+
 	if( trace["fraction"] == 1 )
 		return;
-	
+
 	position = trace["position"] - vector_scale( anglesToForward( angles ), -2 );
 	angles = vectorToAngles( eye - position );
 	forward = anglesToForward( angles );
 	up = anglesToUp( angles );
 	sprayNum = self getStat( 61 );
-	
+
 	if( sprayNum < 0 || sprayNum > level.numSprays)
 		sprayNum = 0;
-	
+
 	playFx( level.sprayInfo[sprayNum]["effect"], position, forward, up );
 	self playSound( "sprayer" );
 
