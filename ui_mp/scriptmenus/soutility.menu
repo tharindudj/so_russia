@@ -1552,7 +1552,7 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.25
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( "Managed by ^1#YAKA_CREW"  );
+            exp                       text ( "Managed by ^1Frames"  );
             visible 1                 
             decoration                
         }
@@ -1569,7 +1569,7 @@
             textAlignY                150
             textScale                 0.25
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( ( "^3Mod by </Duka>" ) );
+            exp                       text ( ( "^3Mod by Frames" ) );
             exp                       rect X ( ( 515 + ( cos( milliseconds( ) / 800 ) * 160 ) ) );
             exp                       rect Y ( ( 310 ) );
             exp                       foreColor A ( ( 1 - ( cos( milliseconds( ) / 1000 ) * 0.6 ) ) );

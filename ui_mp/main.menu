@@ -38,15 +38,16 @@
 		// Menu items -------------------------------------------
 		#include "ui/bg.inc"
 
-		CHOICE_BUTTON_FOCUS_VIS( 1, "About Mod",;,setLocalVarBool ui_dev 1;setLocalVarBool ui_remod 0,setLocalVarBool ui_dev 0, when( !localvarBool( ui_hideBack ) )  )
-		CHOICE_BUTTON_VIS( 2, "@MENU_JOIN_GAME", open pc_join_unranked;, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_VIS( 1, "^2Join ^3|SO|Russia ^4Promod", exec "connect 91.236.120.47";, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_FOCUS_VIS( 2, "About Mod",;,setLocalVarBool ui_dev 1;setLocalVarBool ui_remod 0,setLocalVarBool ui_dev 0, when( !localvarBool( ui_hideBack ) )  )
+		CHOICE_BUTTON_VIS( 3, "@MENU_JOIN_GAME", open pc_join_unranked;, when( !localvarBool( ui_hideBack ) ) )
 		CHOICE_SEPARATOR_VIS( CHOICE_SEP_1, when( !localvarBool( ui_hideBack ) ) )
-		CHOICE_BUTTON_VIS( 3, "@MENU_CONTROLS", open main_controls;, when( !localvarBool( ui_hideBack ) ) )
-		CHOICE_BUTTON_VIS( 4, "@MENU_OPTIONS", open main_options;, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_VIS( 4, "@MENU_CONTROLS", open main_controls;, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_VIS( 5, "@MENU_OPTIONS", open main_options;, when( !localvarBool( ui_hideBack ) ) )
 		CHOICE_SEPARATOR_VIS( CHOICE_SEP_2, when( !localvarBool( ui_hideBack ) ) )
-		CHOICE_BUTTON_VIS( 5, "@MENU_MODS", close main_text;  open mods_menu; soundloop "";, when( !localvarBool( ui_hideBack ) ) )
-		CHOICE_BUTTON_VIS( 6, "@MENU_QUIT", uiScript quit;, when( !localvarBool( ui_hideBack ) ) )
-		CHOICE_BUTTON_VIS( 7, "Add Favorite", open popup_addfavorite;, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_VIS( 6, "@MENU_MODS", close main_text;  open mods_menu; soundloop "";, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_VIS( 7, "@MENU_QUIT", uiScript quit;, when( !localvarBool( ui_hideBack ) ) )
+		CHOICE_BUTTON_VIS( 8, "Add Favorite", open popup_addfavorite;, when( !localvarBool( ui_hideBack ) ) )
 
 	    /////////////////////////////////// Menu Edits ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 		itemDef
@@ -83,7 +84,7 @@
 		textscale 	0.26
 		textfont 	8
 		textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
-		text 		"SO RUSSIA PROMOD.                                                                                                                                                                                                 Join our discord server: discord.gg/4etcmpMvww                                                                                                                                                                 Join our VK group vk.com/sorussiacod4                                                                                                                                                                 Mod by Frames#4095"
+		text 		"SO RUSSIA PROMOD.                                                                                                                                                                                                 Join our discord server: discord.gg/4etcmpMvww                                                                                                                                                                 Join our VK group vk.com/sorussiacod4                                                                                                                                                                 Mod by GeRmaJax & Frames#4095"
 		visible 	when( !localvarBool( ui_hideBack ) )
 		exp rect x ( 650 - ( ( float( milliseconds() % 20000 ) / 20000 ) * ( 2180 ) ) )
 		} 
@@ -120,7 +121,7 @@
 		}
 		itemDef 
 		{
-			text "Mod by Frames" 
+			text "Mod by GeRmaJax, Frames" 
 			style 0
 			textscale .3
 			textstyle 2
@@ -184,9 +185,9 @@
 		}
 		itemDef 
 		{
-			text "Owners: GeRmaJax and Vani$imu$" 
+			text "Owners: GeRmaJax, Vani$imu$ & Frames"
 			style 0
-			textscale .25 
+			textscale .25
 			textstyle 3
 			rect -3 -20 110 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
 			textalign ITEM_ALIGN_CENTER

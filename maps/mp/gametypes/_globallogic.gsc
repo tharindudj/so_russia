@@ -131,8 +131,7 @@ init()
 	thread crazy\_general::init();
 	level thread AutoTeamsBalancer();
 	level thread code\main::init();
-	thread frames\_spray::init();
-	thread frames\_afkCheck::init();
+	thread frames\_general::init();
 	buildCharacterInfo();
 }
 
@@ -1024,23 +1023,23 @@ endGame(winner,endReasonText)
 	
 	//maps\mp\gametypes\votemap::map();
 	
-	for(i=0;
-	i<level.players.size;
-	i++)
-	{
-		player=level.players[i];
-		player closeMenu();
-		player closeInGameMenu();
-		player notify("reset_outcome");
-		player thread spawnIntermission();
-		player setClientDvar("ui_hud_hardcore",0);
-	}
+	// for(i=0;
+	// i<level.players.size;
+	// i++)
+	// {
+	// 	player=level.players[i];
+	// 	player closeMenu();
+	// 	player closeInGameMenu();
+	// 	player notify("reset_outcome");
+	// 	player thread spawnIntermission();
+	// 	player setClientDvar("ui_hud_hardcore",0);
+	// }
 	//wait 4;
 	//level thread maps\mp\gametypes\_endroundmusic::playSoundOnAllPlayersX( "HGW_Gameshell_v10" );
-	wait 8;
+	// wait 4;
 	//crazy\_credit::settings();
 	
-	maps\mp\gametypes\votemap::map();
+	frames\_mapvote::init();
 	
 	if(isDefined(game["PROMOD_MATCH_MODE"])&&game["PROMOD_MATCH_MODE"]=="match")
 	{
@@ -2702,7 +2701,7 @@ Callback_PlayerKilled(eInflictor,attacker,iDamage,sMeansOfDeath,sWeapon,vDir,sHi
 	{
 		body thread delayBloodPool();
 		PlayFX( level.fx_money, self.origin );
-		playFx( level.d_effect, self.origin );
+		//playFx( level.d_effect, self.origin );
 	}
 	if(!isDefined(self.isKnifing))
 	{

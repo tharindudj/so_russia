@@ -34,13 +34,14 @@ cls
 cd
 echo -----------------------------------------------------------------
 echo.
-echo  Building pml220.iwd:
-del pml220.iwd
+echo  Building IWD files...:
+del so_pml220.iwd
+del so_sound.iwd
+del so_weapons.iwd
 del z_custom_ruleset.iwd
-7za a -r -tzip pml220.iwd images
-7za a -r -tzip pml220.iwd sound
-7za a -r -tzip pml220.iwd weapons
-7za a -r -tzip z_custom_ruleset.iwd promod_ruleset
+7za a -r -tzip so_pml220.iwd images
+7za a -r -tzip so_sound.iwd sound
+7za a -r -tzip so_weapons.iwd weapons
 echo Completed: %time%
 echo -----------------------------------------------------------------
 pause
@@ -119,7 +120,7 @@ QPROCESS "cod4x18_dedrun.exe">NUL
 IF %ERRORLEVEL% EQU 0 ECHO "Close the server before starting a new one!"
 IF %ERRORLEVEL% EQU 0 taskkill /f /IM cod4x18_dedrun.exe
 echo  Starting Server:
-start D:\cod\cod4x18_dedrun.exe +set sv_punkbuster 0 +set pb_sv_enable 0 +map_rotate +sv_authorizemode 0 +set fs_game Mods/so_russia +map mp_killhouse +set r_xassetnum "xmodel=1200" +set developer 1 +set promod_mode custom_public + exec server.cfg +g_gametype sd
+start D:\cod\cod4x18_dedrun.exe +set fs_basepath "D:\cod\" +set fs_homepath "D:\cod\" +set sv_punkbuster 0 +set pb_sv_enable 0 +map_rotate +sv_authorizemode 0 +set fs_game Mods/so_russia +map mp_killhouse +set r_xassetnum "material=2560 xmodel=1200 xanim=3200 image=3000" +set developer 1 +set promod_mode custom_public + exec server.cfg +g_gametype sd +set scr_sd_scorelimit 1 +set scr_sd_roundlimit 1
 echo ------------------------------
 pause
 goto :MAKEOPTIONS

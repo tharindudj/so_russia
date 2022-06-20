@@ -11,7 +11,7 @@
 ||===================================================================*/
 
 #include duffman\_common;
-
+#include maps\mp\_utility;
 
 init()
 {
@@ -45,14 +45,12 @@ init()
 					players[i].countedFPS thread FadeOut(1);
 				if(isDefined(players[i].mc_rsc ))
 					players[i].mc_rsc thread FadeOut(1);
-				
 			}
-		}				
+		}
 	}
 }
 
-initStats() 
-{
+initStats() {
 	self.pers["shoots"] = 1;
 	self.pers["hits"] = 1;
 	if(!isDefined(self.pers["gottags"]))
@@ -72,16 +70,28 @@ ShowKDRatio()
 	if( IsDefined( self.mc_accuracy ) )	self.mc_accuracy Destroy();
 	if( IsDefined( self.mc_streak ) )	self.mc_streak Destroy();
 	if( IsDefined( self.mc_kc ) )	self.mc_kc Destroy();
-	if( IsDefined( self.hudkills ) )	self.hudkills Destroy();
-	if( IsDefined( self.huddeaths ) )	self.huddeaths Destroy();
-	if( IsDefined( self.hudscore ) )	self.hudscore Destroy();
+	//if( IsDefined( self.hudkills ) )	self.hudkills Destroy();
+	//if( IsDefined( self.huddeaths ) )	self.huddeaths Destroy();
+	//if( IsDefined( self.hudscore ) )	self.hudscore Destroy();
 	if( IsDefined( self.hudheadshots ) )	self.hudheadshots Destroy();
 	if( IsDefined( self.countedFPS ) )	self.countedFPS Destroy();
 	if( IsDefined( self.mc_rsc ) )	self.mc_rsc  Destroy();
 	
 	//if( IsDefined( self.detailsBackground ) )	self.detailsBackground Destroy();
-	
-	/*
+
+
+	card = (randomInt(4));
+	if (card == 0)
+		card = 1;
+	if(game["roundsplayed"] == 0 ){
+	time = 4;
+	} else {
+	time = 1;
+	}	
+
+
+
+/*	
 	self.detailsBackground = [];
 	self.detailsBackground[1] = newclientHudElem(self);
 	self.detailsBackground[1].x = 110;
@@ -96,7 +106,7 @@ ShowKDRatio()
 	self.detailsBackground[1].foreground = false;
 	self.detailsBackground[1].hidewheninmenu = true;
 	self.detailsBackground[1].archived = false;
-	*/
+*/	
 	
 	self.mc_streak = NewClientHudElem(self);
 	self.mc_streak.x = 115;
@@ -111,12 +121,12 @@ ShowKDRatio()
 	self.mc_streak.label = &"Killstreak:^7 &&1";
 	self.mc_streak FadeOverTime(.5);
 	self.mc_streak.alpha = 0.8;
-	self.mc_streak.color = (0.1,1,0.6);
-	//self.mc_streak.glowcolor = (0.1,1,0.6);
+	self.mc_streak.color = (0.05, 0.07, 0.95);
+	self.mc_streak.glowcolor = (0.05, 0.07, 0.95);
 	self.mc_streak.glowalpha = 0.5;
 	self.mc_streak.foreground = 1;
 	
-	/////////////////
+/*	/////////////////
 	self.hudkills = NewClientHudElem(self);
 	self.hudkills.x = 120;
 	self.hudkills.y = -407;
@@ -152,7 +162,7 @@ ShowKDRatio()
 	self.huddeaths.glowcolor = (0.9,0.1,0.2);
 	self.huddeaths.glowalpha = 1;
 	self.huddeaths.foreground = 1;
-	
+*/	
 	self.hudheadshots = NewClientHudElem(self);
 	self.hudheadshots.x = 115;
 	self.hudheadshots.y = -423;
@@ -166,11 +176,11 @@ ShowKDRatio()
 	self.hudheadshots.label = &"Headshots:^7 &&1";
 	self.hudheadshots FadeOverTime(.5);
 	self.hudheadshots.alpha = 0.8;
-	self.hudheadshots.color = (0.1,1,0.6);
-	//self.hudheadshots.glowcolor = (0.1,1,0.6);
+	self.hudheadshots.color = (0.77, 0.24, 0.33);
+	self.hudheadshots.glowcolor = (0.77, 0.24, 0.33);
 	self.hudheadshots.glowalpha = 0.5;
 	self.hudheadshots.foreground = 1;
-	
+/*	
 	self.hudscore = NewClientHudElem(self);
 	self.hudscore.x = 120;
 	self.hudscore.y = -377;
@@ -189,7 +199,7 @@ ShowKDRatio()
 	self.hudscore.foreground = 1;
 	////////////////////
 	
-	self.mc_kdratio = NewClientHudElem(self);
+*/	self.mc_kdratio = NewClientHudElem(self);
 	self.mc_kdratio.x = 115;
 	self.mc_kdratio.y = -447;
 	self.mc_kdratio.horzAlign = "left";
@@ -202,8 +212,8 @@ ShowKDRatio()
 	self.mc_kdratio.label = &"K/D Ratio: ^7&&1";
 	self.mc_kdratio FadeOverTime(.5);
 	self.mc_kdratio.alpha = 0.8;
-	self.mc_kdratio.color = (0.1,1,0.6);
-	//self.mc_kdratio.glowcolor = (0.1,1,0.6);
+	self.mc_kdratio.color = (0.82, 0.51, 0.19);
+	self.mc_kdratio.glowcolor = (0.82, 0.51, 0.19);
 	self.mc_kdratio.glowalpha = 0.5;
 	self.mc_kdratio.foreground = 1;
 
@@ -222,7 +232,7 @@ ShowKDRatio()
 	self.mc_accuracy FadeOverTime(.5);
 	self.mc_accuracy.alpha = 0.8;
 	self.mc_accuracy.color = (0.1,1,0.6);;
-	//self.mc_accuracy.glowcolor = (0.1,1,0.6);
+	self.mc_accuracy.glowcolor = (0.1,1,0.6);
 	self.mc_accuracy.glowalpha = 0.5;
 	self.mc_accuracy.foreground = 1;
 	
@@ -239,15 +249,15 @@ ShowKDRatio()
 	self.countedFPS.label = &"FPS: &&1";	
 	self.countedFPS FadeOverTime(.5);
 	self.countedFPS.alpha = 0.9;
-	//self.countedFPS.glowcolor = (0.8, 0.8, 0.8);
+	self.countedFPS.glowcolor = (0.8, 0.8, 0.8);
 	self.countedFPS.glowalpha = 1;
 	self.countedFPS.foreground = 1;
 	
 	if(level.gametype == "kc")
 	{
 		self.mc_kc = NewClientHudElem(self);
-		self.mc_kc.x = 112;
-		self.mc_kc.y = -428;
+		self.mc_kc.x = 115;
+		self.mc_kc.y = -400;
 		self.mc_kc.horzAlign = "left";
 		self.mc_kc.vertAlign = "bottom";
 		self.mc_kc.alignX = "left";
@@ -261,12 +271,11 @@ ShowKDRatio()
 		self.mc_kc.glowcolor = (0.3, 0.3, 0.3);
 		self.mc_kc.glowalpha = 1;
 	}
-
 	if(level.gametype == "sr")
 		{
 			self.mc_rsc = NewClientHudElem(self);
-			self.mc_rsc.x = 120;
-			self.mc_rsc.y = -360;
+			self.mc_rsc.x = 115;
+			self.mc_rsc.y = -400;
 			self.mc_rsc.horzAlign = "left";
 			self.mc_rsc.vertAlign = "bottom";
 			self.mc_rsc.alignX = "left";
@@ -295,7 +304,7 @@ ShowKDRatio()
 		if(first)
 			first = 0;
 		else 
-			wait .5;//** let the code time till he MAY kill someone	
+			wait .5; //** let the code time till he MAY kill someone	
 		if(!isDefined(self) || !isDefined(self.pers) || !isDefined(self.pers[ "hits" ]) || !isDefined(self.pers[ "kills" ]) || !isDefined(self.pers[ "deaths" ]) || !isDefined(self.pers[ "shoots" ]) || !isDefined(self.mc_kdratio) || !isDefined(self.mc_accuracy) || !isDefined(self.mc_streak))
 			return;	
 		if( IsDefined( self.pers[ "kills" ] ) && IsDefined( self.pers[ "deaths" ] ) )
@@ -316,9 +325,9 @@ ShowKDRatio()
 		//self.mc_accuracy.color = color1;
 		if(isDefined(acu)) self.mc_accuracy SetValue( acu );
 		else self.mc_accuracy setValue( 100 );
-		self.hudkills SetValue( k );
-		self.huddeaths SetValue( d );
-		self.hudscore SetValue( s );
+		//self.hudkills SetValue( k );
+		//self.huddeaths SetValue( d );
+		//self.hudscore SetValue( s );
 		self.hudheadshots SetValue( h );
 		self.countedFPS SetValue( f );
 		if(isdefined(self.cur_kill_streak)) self.mc_streak setValue(self.cur_kill_streak);

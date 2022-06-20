@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<B3Status Time="Thu Jun 09 22:35:44 2022" TimeStamp="1654794344">
+     <Game CapatureLimit="" FragLimit="" Map="mp_killhouse" MapTime="" Name="cod4" RoundTime="" Rounds="" TimeLimit="" Type="war">
+           <Data Name="_Type" Value="Search and Destroy"></Data>
+           <Data Name="_Maps" Value="COD4 Stock"></Data>
+           <Data Name="_ModUpdate" Value="Yes"></Data>
+           <Data Name="_ModVer" Value="v2 stable"></Data>
+           <Data Name="_Mod" Value="PROMOD LK"></Data>
+           <Data Name="_Location" Value="SRI LANKA"></Data>
+           <Data Name="_Website" Value="www.so-russia.TK"></Data>
+           <Data Name="_Admin" Value="GeRmaJax"></Data>
+           <Data Name="g_compassShowEnemies" Value="0"></Data>
+           <Data Name="sv_mapname" Value=""></Data>
+           <Data Name="gamename" Value="Call of Duty 4"></Data>
+           <Data Name="sv_pure" Value="1"></Data>
+           <Data Name="sv_floodprotect" Value="1"></Data>
+           <Data Name="sv_maxRate" Value="25000"></Data>
+           <Data Name="mapname" Value="mp_killhouse"></Data>
+           <Data Name="g_gametype" Value="war"></Data>
+           <Data Name="uptime" Value="0 minutes"></Data>
+           <Data Name="g_mapStartTime" Value="Thu Jun 09 22:35:35 2022"></Data>
+           <Data Name="sv_voice" Value="1"></Data>
+           <Data Name="sv_disableClientConsole" Value="0"></Data>
+           <Data Name="sv_maxPing" Value="600"></Data>
+           <Data Name="sv_minPing" Value="0"></Data>
+           <Data Name="sv_hostname" Value="^1SO| ^2Promod ^5SnD"></Data>
+           <Data Name="sv_privateClients" Value="0"></Data>
+           <Data Name="protocol" Value="21"></Data>
+           <Data Name="_CoD4 X Site" Value="http://cod4x.ovh"></Data>
+           <Data Name="sv_maxclients" Value="24"></Data>
+           <Data Name="revision" Value="54db3b9c742a86eb594f47fd0caa98f7d8921aec"></Data>
+           <Data Name="branch" Value="master"></Data>
+           <Data Name="build" Value="1153"></Data>
+           <Data Name="shortversion" Value="-"></Data>
+           <Data Name="version" Value="CoD4 X - win_mingw-x86 build 1153 May  1 2022"></Data>
+           <Data Name="fs_game" Value="Mods/so_russia"></Data>
+           <Data Name="pswrd" Value="0"></Data>
+           <Data Name="sv_type" Value="0"></Data>
+     </Game>
+     <Clients Total="0"></Clients>
+</B3Status>

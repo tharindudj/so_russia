@@ -564,7 +564,98 @@
 		
 		
 		
-		
+		itemDef
+        {
+            rect                      -20 -89 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textScale                 0.55
+            exp                       material ( ( ( "hud_website" ) ) );
+            visible                   when ( ( ( dvarint( "so_newUI" ) != 1 ) ) )
+            decoration                
+        }
+        itemDef
+        {
+            rect                      2 -86 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textFont                  UI_FONT_OBJECTIVE
+            textAlign                 ITEM_ALIGN_TOP_LEFT
+            textScale                 0.3
+            textStyle                 ITEM_TEXTSTYLE_SHADOWED
+            exp                       text ( ( ( ( "http:/" ) ) ) );
+            visible                   when ( ( dvarint( "so_newUI" ) != 1 ) )
+            decoration                
+        }
+        itemDef
+        {
+            rect                      42 -86 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textFont                  UI_FONT_OBJECTIVE
+            textAlign                 ITEM_ALIGN_TOP_LEFT
+            textScale                 0.3
+            textStyle                 ITEM_TEXTSTYLE_SHADOWED
+            exp                       text ( ( ( ( "/" + "www.vk.com/sorussia" ) ) ) );
+            visible                   when ( ( dvarint( "so_newUI" ) != 1 ) )
+            decoration                
+        }
+        itemDef
+        {
+            rect                      -20 -64 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textScale                 0.55
+            exp                       material ( ( ( "hud_discord" ) ) );
+            visible                   when ( ( ( dvarint( "so_newUI" ) != 1 ) ) )
+            decoration                
+        }
+        itemDef
+        {
+            rect                      2 -61 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textFont                  UI_FONT_OBJECTIVE
+            textAlign                 ITEM_ALIGN_TOP_LEFT
+            textScale                 0.3
+            textStyle                 ITEM_TEXTSTYLE_SHADOWED
+            exp                       text ( ( ( ( "http:/" ) ) ) );
+            visible                   when ( ( dvarint( "so_newUI" ) != 1 ) )
+            decoration                
+        }
+        itemDef
+        {
+            rect                      42 -61 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textFont                  UI_FONT_OBJECTIVE
+            textAlign                 ITEM_ALIGN_TOP_LEFT
+            textScale                 0.3
+            textStyle                 ITEM_TEXTSTYLE_SHADOWED
+            exp                       text ( ( ( ( "/" + "discord.gg/4etcmpMvww" ) ) ) );
+            visible                   when ( ( dvarint( "so_newUI" ) != 1 ) )
+            decoration                
+        }
 		
 		
 		
@@ -1556,7 +1647,7 @@
             textAlign                 ITEM_ALIGN_TOP_RIGHT
             textScale                 0.25
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( ( ( ( "www.so-russia.tk" ) ) ) );
+            exp                       text ( ( ( ( "discord.gg/4etcmpMvww" ) ) ) );
             visible                   when ( ( ( ! localvarbool( "ui_hideBack" ) ) && dvarint( "so_newUI" ) == 1 ) )
             decoration                
             autoWrapped               
@@ -1778,7 +1869,7 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.3
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( "> Visit ^2https:/ /so-russia.tk/ss/^7 to view Screenshots"  );
+            exp                       text ( "> Visit ^2Our Discord ^7 to view Screenshots"  );
             visible                   when ( ( ( localvarint( "ui_highlight" ) == 30 && localvarstring( "ui_choicegroup" ) == "play_class" && dvarint( "so_newUI" ) == 1 ) ) )
             decoration                
         }
@@ -1794,7 +1885,7 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.3
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( "> Visit ^2https:/ /so-russia.tk/xlr/^7 to get your detailed stats"  );
+            exp                       text ( "> Visit ^2Our Other servers"  );
             visible                   when ( ( ( localvarint( "ui_highlight" ) == 30 && localvarstring( "ui_choicegroup" ) == "play_class" && dvarint( "so_newUI" ) == 1 ) ) )
             decoration                
         }
@@ -1826,100 +1917,8 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.3
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( "> Visit ^1www.so-russia.tk^7 for more.."  );
+            exp                       text ( "> Visit ^1discord.gg/4etcmpMvww^7 for more.."  );
             visible                   when ( ( ( localvarint( "ui_highlight" ) == 30 && localvarstring( "ui_choicegroup" ) == "play_class" && dvarint( "so_newUI" ) == 1 ) ) )
-            decoration                
-        }
-        itemDef
-        {
-            rect                      -20 -89 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
-            style                     WINDOW_STYLE_SHADER
-            borderSize                1
-            foreColor                 1 1 1 1
-            backColor                 0 0 0 0
-            borderColor               0 0 0 0
-            outlineColor              0 0 0 0
-            textScale                 0.55
-            exp                       material ( ( ( "hud_discord" ) ) );
-            visible                   when ( ( ( dvarint( "so_newUI" ) == 1 ) ) )
-            decoration                
-        }
-        itemDef
-        {
-            rect                      2 -86 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
-            borderSize                1
-            foreColor                 1 1 1 1
-            backColor                 0 0 0 0
-            borderColor               0 0 0 0
-            outlineColor              0 0 0 0
-            textFont                  UI_FONT_OBJECTIVE
-            textAlign                 ITEM_ALIGN_TOP_LEFT
-            textScale                 0.3
-            textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( ( ( ( "http:/" ) ) ) );
-            visible                   when ( ( dvarint( "so_newUI" ) == 1 ) )
-            decoration                
-        }
-        itemDef
-        {
-            rect                      42 -86 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
-            borderSize                1
-            foreColor                 1 1 1 1
-            backColor                 0 0 0 0
-            borderColor               0 0 0 0
-            outlineColor              0 0 0 0
-            textFont                  UI_FONT_OBJECTIVE
-            textAlign                 ITEM_ALIGN_TOP_LEFT
-            textScale                 0.3
-            textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( ( ( ( "/" + "www.vk.com/sorussia" ) ) ) );
-            visible                   when ( ( dvarint( "so_newUI" ) == 1 ) )
-            decoration                
-        }
-        itemDef
-        {
-            rect                      -20 -64 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
-            style                     WINDOW_STYLE_SHADER
-            borderSize                1
-            foreColor                 1 1 1 1
-            backColor                 0 0 0 0
-            borderColor               0 0 0 0
-            outlineColor              0 0 0 0
-            textScale                 0.55
-            exp                       material ( ( ( "hud_website" ) ) );
-            visible                   when ( ( ( dvarint( "so_newUI" ) == 1 ) ) )
-            decoration                
-        }
-        itemDef
-        {
-            rect                      2 -61 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
-            borderSize                1
-            foreColor                 1 1 1 1
-            backColor                 0 0 0 0
-            borderColor               0 0 0 0
-            outlineColor              0 0 0 0
-            textFont                  UI_FONT_OBJECTIVE
-            textAlign                 ITEM_ALIGN_TOP_LEFT
-            textScale                 0.3
-            textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( ( ( ( "http:/" ) ) ) );
-            visible                   when ( ( dvarint( "so_newUI" ) == 1 ) )
-            decoration                
-        }
-        itemDef
-        {
-            rect                      42 -61 20 20 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_BOTTOM
-            borderSize                1
-            foreColor                 1 1 1 1
-            backColor                 0 0 0 0
-            borderColor               0 0 0 0
-            outlineColor              0 0 0 0
-            textFont                  UI_FONT_OBJECTIVE
-            textAlign                 ITEM_ALIGN_TOP_LEFT
-            textScale                 0.3
-            textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( ( ( ( "/" + "www.so-russia.tk" ) ) ) );
-            visible                   when ( ( dvarint( "so_newUI" ) == 1 ) )
             decoration                
         }
         itemDef
@@ -3041,7 +3040,7 @@
             decoration                
         }
 
-// Mute Player Button Start
+// Mute Player Button Start - Changed to Add to Favorites
         itemDef
         {
             rect                      -320 358 214.5 22 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
@@ -3085,10 +3084,11 @@
             textAlignX                -10
             textScale                 0.4
             textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
-            action                    { play mouse_click ; open muteplayer ; close self ; ;  }
+           // action                    { play mouse_click ; open muteplayer ; close self ; ;  }
+           action                    { play mouse_click ; open popup_addfavorite ; close self ; ;  }
             onFocus                   { play so_mouse_over ; setLocalVarInt ui_highlight 6 ; setLocalVarString ui_choicegroup class ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
-            exp                       text ( ( "Mute Players" ) );
+            exp                       text ( ( "Add Favorite" ) );
             visible                   when ( ( dvarint( "so_newUI" ) != 1 ) )
         }
 
@@ -3205,7 +3205,7 @@
             textAlignX                -10
             textScale                 0.4
             textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
-            exp                       text ( ( "www.so-russia.tk" ) );
+            exp                       text ( ( "discord.gg/4etcmpMvww" ) );
             visible                   when ( ( ! dvarbool( "sv_running" ) && dvarint( "so_newUI" ) != 1 ) )
             decoration                
         }*/
@@ -3285,7 +3285,7 @@
             action                    { play mouse_click ; ; ;  }
             onFocus                   { play so_mouse_over ; setLocalVarInt ui_highlight 10 ; setLocalVarString ui_choicegroup class ; setLocalVarBool ui_dev 1 ; setLocalVarBool ui_remod 0  }
             leaveFocus                { setLocalVarInt ui_highlight 0 ; setLocalVarBool ui_dev 0  }
-            exp                       text ( ( "@PL_SERVER_INFORMATION" ) );
+            exp                       text ( ( "^5Server Information" ) );
             visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) != 1 ) )
         }
 		
@@ -3329,7 +3329,7 @@
 		}
 		itemDef 
 		{
-			text "www.so-russia.tk"
+			text "discord.gg/4etcmpMvww~"
 			style 0
 			textscale .20
 			textstyle 3
@@ -3359,7 +3359,7 @@
 		}
 		itemDef 
 		{
-			text "Developed By: TEAM Early NoOBs"
+			text "Developed By: GeRmaJax & Frames"
 			style 0
 			textscale .25 
 			textstyle 3
@@ -3374,7 +3374,7 @@
 		}
 		itemDef 
 		{
-			text "Manager: Duka"
+			text "Manager: EN"
 			style 0
 			textscale .25 
 			textstyle 3
@@ -3404,7 +3404,7 @@
 		}
 		itemDef 
 		{
-			text "Admins: ^7GeRmaJax, Vani$imu$^2"
+			text "Admins: ^7GeRmaJax, Vani$imu$^2, ^4Frames"
 			style 0
 			textscale .25 
 			textstyle 3
@@ -3419,7 +3419,7 @@
 		}
 		itemDef 
 		{
-			text "TeamSpeak3:  so-russia.tk"
+			text "TeamSpeak3:  "
 			style 0
 			textscale .25 
 			textstyle 3
@@ -3434,7 +3434,7 @@
 		}
 		itemDef 
 		{
-			text "Player's Screenshots : www.so-russia.tk/ss"
+			text "Player's Screenshots"
 			style 0
 			textscale .25 
 			textstyle 3
@@ -3449,7 +3449,7 @@
 		}
 		itemDef 
 		{
-			text "Facebook Group : www.vk.com/groups/sorussia"
+			text "VK Group : www.vk.com/groups/sorussia"
 			style 0
 			textscale .25 
 			textstyle 3
@@ -3484,12 +3484,12 @@
 			rect		-135 -60 1 1 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
 			origin		0 0
 			forecolor	1 1 1 0.8
-			exp text	( "^7Join with Us : www.so-russia.tk" );
+			exp text	( "^7Join with Us : discord.gg/4etcmpMvww" );
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.24
 			textalign	ITEM_ALIGN_CENTER
 			textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
-			visible 	when ( ( dvarint( "so_newUI" ) != 1 ) )
+			visible 	0 //when ( ( dvarint( "so_newUI" ) != 1 ) )
 			decoration 
 		}
 		
@@ -3503,7 +3503,7 @@
 			textscale	0.16
 			textalign	ITEM_ALIGN_CENTER
 			textstyle	ITEM_TEXTSTYLE_SHADOWEDMORE
-			visible 	when ( ( dvarint( "so_newUI" ) != 1 ) )
+			visible 	0 //when ( ( dvarint( "so_newUI" ) != 1 ) )
 			decoration 
 		}
 		

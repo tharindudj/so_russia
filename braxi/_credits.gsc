@@ -45,7 +45,7 @@ main()
 	wait 0.3;
 	thread showCredit( "_______________________________________", 2.7 );
 	wait 0.4;
-	thread showCredit( "^4Owner: ^6|SO|GeRmaJax, ^2|SO|Vani$imu$", 2.5 );
+	thread showCredit( "^4Owner: ^6|SO|GeRmaJax, ^2|SO|Vani$imu$, ^4Frames", 2.5 );
 	wait 0.4;
     thread showCredit( "^0Visit our other serversvisit ^3Our other servers", 1.5 );
 	wait 0.4;
@@ -53,7 +53,7 @@ main()
 	wait 0.4;
 	//thread showCredit( "^3For more information visit our website at...", 2.0 );
 //	wait 0.4;
-	//thread showCredit( "www.so-russia.tk", 1.9 );
+	//thread showCredit( "~https://discord.gg/4etcmpMvww~", 1.9 );
 	//wait 0.2;
 	//thread showCredit( "______________", 2.5 );
 	wait 0.3;

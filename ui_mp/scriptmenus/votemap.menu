@@ -872,7 +872,7 @@
 		{
 			rect		-140 165 1 1 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
 			origin		0 0
-			exp text	( "^7Join with Us : www.so-russia.tk" );
+			exp text	( "^7Join with Us : discord.gg/4etcmpMvww" );
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.30
 			textalign	ITEM_ALIGN_CENTER
@@ -967,7 +967,7 @@
 		{
 			rect		17 -26 1 1 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_BOTTOM
 			origin		0 0
-			exp text	( "^7Mod by Duka" );
+			exp text	( "^7Mod by Frames" );
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.24
 			//textalign	ITEM_ALIGN_CENTER
@@ -1125,7 +1125,7 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.25
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( ( ( "> ^7Join with us now : www.so-russia.tk" ) ) );
+            exp                       text ( ( ( "> ^7Join with us now : discord.gg/4etcmpMvww" ) ) );
             visible when (dvarString(hud_ShowWinner) != "1")                     
             decoration                
         }

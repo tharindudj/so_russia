@@ -2199,7 +2199,7 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.25
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( "> ^7Join our TeamSpeak3 ^1so-russia.tk"  );
+            exp                       text ( "> ^7Join our Discord ^discord.gg/4etcmpMvww"  );
             visible                   when ( ( ( dvarint( "so_newUI" ) == 1 ) ) )
             decoration                
         }

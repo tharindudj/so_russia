@@ -448,7 +448,7 @@
             onFocus                   { play so_mouse_over ; setLocalVarString ui_choicegroup play_class_marines_flipped ; setLocalVarInt ui_highlight_main 1 ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight_main 0 ;  }
             exp                       material ( ( ( "menu_button_backg" ) ) );
-            visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) != 1 && team( name ) == "TEAM_AXIS" || team(name) == "TEAM_FREE" || team(name) == "TEAM_SPECTATOR") )
+            visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) == 1 && team( name ) == "TEAM_AXIS" || team(name) == "TEAM_FREE" || team(name) == "TEAM_SPECTATOR") )
         }
 		itemDef
         {
@@ -469,7 +469,7 @@
             onFocus                   { play so_mouse_over ; setLocalVarString ui_choicegroup play_class_marines_flipped ; setLocalVarInt ui_highlight_main 1 ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight_main 0 ;  }
             exp                       material ( ( ( "menu_button_backg" ) ) );
-            visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) != 1 && team( name ) == "TEAM_ALLIES" ) )
+            visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) == 1 && team( name ) == "TEAM_ALLIES" ) )
         }
 		
         itemDef
@@ -547,7 +547,7 @@
             onFocus                   { play so_mouse_over ; setLocalVarString ui_choicegroup play_class_marines_flipped ; setLocalVarInt ui_highlight_main 2 ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight_main 0 ;  }
             exp                       material ( ( ( "menu_button_backg" ) ) );
-            visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) != 1 && team( name ) == "TEAM_ALLIES" || team(name) == "TEAM_FREE" || team(name) == "TEAM_SPECTATOR" ) )
+            visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) == 1 && team( name ) == "TEAM_ALLIES" || team(name) == "TEAM_FREE" || team(name) == "TEAM_SPECTATOR" ) )
         }
 		itemDef
         {
@@ -568,7 +568,7 @@
             onFocus                   { play so_mouse_over ; setLocalVarString ui_choicegroup play_class_marines_flipped ; setLocalVarInt ui_highlight_main 2 ; ;  }
             leaveFocus                { setLocalVarInt ui_highlight_main 0 ;  }
             exp                       material ( ( ( "menu_button_backg" ) ) );
-            visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) != 1 && team( name ) == "TEAM_AXIS" ) )
+            visible                   when ( ( ! localvarbool( "ui_hideBack" ) && dvarint( "so_newUI" ) == 1 && team( name ) == "TEAM_AXIS" ) )
         }
 		
         itemDef
@@ -1650,7 +1650,7 @@
 			rect		-135 -60 1 1 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
 			origin		0 0
 			forecolor	1 1 1 0.8
-			exp text	( "^7Join with Us : www.so-russia.tk" );
+			exp text	( "^7Join with Us discord.gg/4etcmpMvww" );
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.24
 			textalign	ITEM_ALIGN_CENTER
@@ -1808,7 +1808,7 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.25
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( "> ^7Join our TeamSpeak3 ^1so-russia.tk"  );
+            exp                       text ( "> ^7Join our VK ^1vk.com/sorussiacod4"  );
             visible                   when ( ( ( dvarint( "so_newUI" ) == 1 ) ) )
             decoration                
         }

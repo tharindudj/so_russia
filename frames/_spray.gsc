@@ -86,7 +86,10 @@ onMenuResponse()
 
 sprayIt()
 {
+	if(!isDefined hasSprayed) hasSprayed = false;
 	self endon( "disconnect" );
+
+	if(self.hasSprayed) return self iprintlnbold("You have already sprayed. wait 7s to spray again.");
 
 	angles = self getPlayerAngles();
 	eye = self getTagOrigin( "j_head" );
@@ -107,4 +110,8 @@ sprayIt()
 	
 	playFx( level.sprayInfo[sprayNum]["effect"], position, forward, up );
 	self playSound( "sprayer" );
+
+	self.hasSprayed = true;
+	wait 7;
+	self.hasSprayed = false;
 }

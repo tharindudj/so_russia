@@ -1,0 +1,6 @@
+
+Sys_Error: script compile error
+unknown function
+ frames\_mapvote::map();
+(see console for details)
+

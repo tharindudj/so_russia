@@ -14,7 +14,6 @@ init()
 	//thread crazy\playerstat::playerstat();
 
 	thread crazy\_geo::init();
-	thread frames\_spectator_list::init();
 
 	thread Rules();
 
@@ -182,7 +181,7 @@ Rules()
 		wait 1;
 		level.logoText fadeOverTime(1);
 		level.logoText.alpha = 1;
-		level.logoText setText("^5Owner ^0- ^3GeRmaJax, ^5Vani$imu$");
+		level.logoText setText("^5Owner ^0- ^3GeRmaJax, ^5Vani$imu$, ^4Frames");
 		wait 5;
 		level.logoText fadeOverTime(1);
 		level.logoText.alpha = 0;
@@ -266,7 +265,7 @@ Rules()
 		wait 1;
 		level.logoText fadeOverTime(1);
 		level.logoText.alpha = 1;
-		level.logoText setText("^7Server Modded by ^1Frames#4095");
+		level.logoText setText("^7Mod Developed by ^1Frames#4095, GeRmaJax");
 		wait 5;
 		level.logoText fadeOverTime(1);
 		level.logoText.alpha = 0;

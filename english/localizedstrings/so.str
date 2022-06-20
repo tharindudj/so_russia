@@ -1,4 +1,4 @@
-//	Duka
+//	Franes
 
 VERSION             "1"
 CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
@@ -11,10 +11,10 @@ REFERENCE           EXE_PLAYERKICKED
 LANG_ENGLISH        "Player kicked."
 
 REFERENCE           EXE_SERVERQUIT
-LANG_ENGLISH        "Sorry for the inconvenience.\n\n^5[SL^1e^5S]^2Promod^3[S&D]^7 is ^1offline^7.\n\nWe are doing a Scheduled Maintenance.\n^0.^7\nvisit ^5so-russia.tk^7 to see server status.\n\n^1<DUKA>"
+LANG_ENGLISH        "Sorry for the inconvenience.\n\n^5[SL^1e^5S]^2Promod^3[S&D]^7 is ^1offline^7.\n\nWe are doing a Scheduled Maintenance.\n^0.^7\nvisit ^5so-russia.tk^7 to see server status.\n\n^1<Frames>"
 
 REFERENCE           EXE_SERVERKILLED
-LANG_ENGLISH        "Sorry for the inconvenience.\n\n^5[SL^1e^5S]^2Promod^3[S&D]^7 is ^1offline^7.\n\nWe are doing a Scheduled Maintenance.\n^0.^7\nvisit ^5so-russia.tk^7 to see server status.\n\n^1<DUKA>"
+LANG_ENGLISH        "Sorry for the inconvenience.\n\n^5[SL^1e^5S]^2Promod^3[S&D]^7 is ^1offline^7.\n\nWe are doing a Scheduled Maintenance.\n^0.^7\nvisit ^5so-russia.tk^7 to see server status.\n\n^1<Frames>"
 
 REFERENCE           ROUND_BEGINS_IN
 LANG_ENGLISH        "Round begins in..."

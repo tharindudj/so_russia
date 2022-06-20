@@ -54,7 +54,6 @@ init( modVersion )
 	for(;;)
 	{       
 		level.rulesText setText("^7We are ^2^3[SL^2e^3SPORT]");
-		//level.rulesText setText("^1Happy wesak festival for Sri Lankans.^2^3[SL^2e^3SPORT] ^7Team.");
 		wait 20;
 		level.rulesText setText(" ");
 		wait 2;
@@ -67,11 +66,7 @@ init( modVersion )
 		level.rulesText setText(" ");
 		wait 2;
 		level.rulesText setText("^1TeamSpeak3 IP ^3209.58.178.174");
-		wait 2;       
-		//level.rulesText setText("^7We are ^2^3[SL^2e^3SPORT] ^0- ^3Sri Lanka");
-		//wait 10;
-		//level.rulesText setText(" ");
-		//wait 10;
+		wait 2;
 		level.rulesText setText("^7Type ^1!register ^7& use more ^3features.");
 		wait 2;
 		level.rulesText setText(" ");

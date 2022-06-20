@@ -10,9 +10,12 @@ onPlayerConnect(){
 	if(level.players.size > 10)
 		exitLevel( false );
 
+	gmtype = "sd";
+	gmname = "Search and Destroy";
+
 	level.votetime = 20;
 	level.isVoted = 0;
-	tmpmaps=strTok("map mp_backlot map mp_crash map mp_crossfire map mp_strike map mp_citystreets map mp_killhouse", " ");
+	tmpmaps=strTok("map mp_backlot map mp_crash map mp_crossfire map mp_strike map mp_citystreets map mp_killhouse map mp_nuketown map mp_berry_village map mp_naout map mp_marketcenter map mp_island_town map mp_backlot_night map mp_poolparty map mp_bubba map mp_slick map mp_toujane_beta", " ");
 	maps = [];
 	
 	for(i=0;i<tmpmaps.size;i++)
@@ -89,7 +92,17 @@ onPlayerConnect(){
 			//if (result=="mp_killhouse"){
 			//	setDvar( "sv_maprotationcurrent", "gametype war"  + " map " + result );
 			//}else{
-				setDvar( "sv_maprotationcurrent", "gametype sd"  + " map " + result );
+			randomGametype = 1+randomInt(2);
+
+
+			if(randomGametype > 1) {
+				gmtype = "sr";
+				gamename = "Search and Rescue";
+			} else {
+				gmtype = "sd";
+				gamename = "Search and Destroy";
+			}
+				setDvar( "sv_maprotationcurrent", "gametype " + gmtype  + " map " + result );
 			//}
 		}
 	}
@@ -227,13 +240,20 @@ getRealMapName(map)
 		case "mp_killhouse":	mapname = "Killhouse"; 		break;
 		case "mp_marketcenter":	mapname = "Marketcenter"; 	break;
 		case "mp_nuketown":		mapname = "Nuketown"; 		break;
+		case "mp_berry_village": mapname = "Berry Village"; break;
+		case "mp_poolparty":	mapname = "Poolparty"; 		break;
+		case "mp_island_town":	mapname = "Island Town"; break;
+		case "mp_backlot_night":	mapname = "Backlot Night"; break;
+		case "mp_bubba":	mapname = "Bubba"; break;
+		case "mp_slick":	mapname = "Slick"; break;
+		case "mp_naout":	mapname = "Naout"; break;
 
 	}
 	if(mapname == "")
 		mapname = getGoodName(map);
 		
 	//if(map=="mp_killhouse") return mapname + " - (TDM)";
-	return mapname + " - (Search and Destroy)";
+	return mapname;
 }
 
 getGoodName(mapname)

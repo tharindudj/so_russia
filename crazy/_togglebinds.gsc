@@ -26,7 +26,7 @@ onPlayerConnected()
 	if(!isDefined(self.pers["so_hiticon"]))
 		self.pers["so_hiticon"] = self getstat(3152);
 	if(!isDefined(self.pers["so_killcam_style"]))
-		self.pers["so_killcam_style"] = 2;
+		self.pers["so_killcam_style"] = 1;
 	if(!isDefined(self.pers["so_killcard"]))
 		self.pers["so_killcard"] = 1;
 	if(!isDefined(self.pers["so_advertisement"]))
@@ -123,105 +123,27 @@ onPlayerConnected()
 	// 	self setClientDvar( "so_killCamStyleSample", "killcam1" );
 	// 	self setClientDvar( "so_killcamName", "Promod Default (RED) Kill-Camera" );
 	// }
-	// if(self.pers["so_killcam_style"] == 1){
-	// 	self setClientDvar( "so_killcam_style", 1 );
-	// 	self setClientDvar( "so_killCamStyleSample", "killcam2" );
-	// 	self setClientDvar( "so_killcamName", "Promod (BLACK) Kill-Camera" );
-	// }
+	if(self.pers["so_killcam_style"] == 1){
+		self setClientDvar( "so_killcam_style", 1 );
+		self setClientDvar( "so_killCamStyleSample", "killcam2" );
+		self setClientDvar( "so_killcamName", "Promod (BLACK) Kill-Camera" );
+	}
 	if(self.pers["so_killcam_style"] == 2){
 		self setClientDvar( "so_killcam_style", 2 );
 		self setClientDvar( "so_killCamStyleSample", "killcam3" );
 		self setClientDvar( "so_killcamName", "SO (Digital Camcorder) Kill-Camera" );
 	}
-	// if(self.pers["so_killcam_style"] == 3){
-	// 	self setClientDvar( "so_killcam_style", 3 );
-	// 	self setClientDvar( "so_killCamStyleSample", "killcam4" );
-	// 	self setClientDvar( "so_killcamName", "SO (Fun Sinhala) Kill-Camera" );
-	// }
-	
-	
-	// if(self.pers["so_killcard"] == 0){
-	// 	self setClientDvar( "so_killcard", 0 );
-	// 	self setClientDvar( "so_killCardSample", "killcard" );
-	// 	self setClientDvar( "so_killcardName", "SO (Default) Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("default");
-	// }
-	// if(self.pers["so_killcard"] == 1){
-	// 	self setClientDvar( "so_killcard", 1 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_sl" );
-	// 	self setClientDvar( "so_killcardName", "Mother Sri Lanka Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("blue");
-	// }
-	// if(self.pers["so_killcard"] == 2){
-	// 	self setClientDvar( "so_killcard", 2 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_in" );
-	// 	self setClientDvar( "so_killcardName", "Chak De! India Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("green");
-	// }
-	// if(self.pers["so_killcard"] == 3){
-	// 	self setClientDvar( "so_killcard", 3 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_ns" );
-	// 	self setClientDvar( "so_killcardName", "Racing Car Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("black");
-	// }
-	// if(self.pers["so_killcard"] == 4){
-	// 	self setClientDvar( "so_killcard", 4 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_yk" );
-	// 	self setClientDvar( "so_killcardName", "Api Yakku Bolawu (Sinhala) Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("red");
-	// }
-	// if(self.pers["so_killcard"] == 5){
-	// 	self setClientDvar( "so_killcard", 5 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_pg" );
-	// 	self setClientDvar( "so_killcardName", "Pubg Game Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("white");
-	// }
-	// if(self.pers["so_killcard"] == 6){
-	// 	self setClientDvar( "so_killcard", 6 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_mw" );
-	// 	self setClientDvar( "so_killcardName", "Modern-Warfare Game Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("yellow");
-	// }
-	// if(self.pers["so_killcard"] == 7){
-	// 	self setClientDvar( "so_killcard", 7 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_jk" );
-	// 	self setClientDvar( "so_killcardName", "Joker Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("orange");
-	// }
-	// if(self.pers["so_killcard"] == 8){
-	// 	self setClientDvar( "so_killcard", 8 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_gl" );
-	// 	self setClientDvar( "so_killcardName", "Gaming is Life (Sinhala) Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("brown");
-	// }
-	// if(self.pers["so_killcard"] == 9){
-	// 	self setClientDvar( "so_killcard", 9 );
-	// 	self setClientDvar( "so_killCardSample", "killcard_ct" );
-	// 	self setClientDvar( "so_killcardName", "Cartoon Kill-Card" );
-	// 	duffman\_killcard::setDesignAtConnect("member");
-	// }
-	
-	//thread crazy\_so_notify_center::init();
+
 }
 onPlayerSpawn()
 {
-	//thread crazy\so_welcome::welcomescreen();
-	//wait 3;
+
 	self crazy\_common::clientCmd("bind "+level.fovkey +" openscriptmenu -1 fov");
 	wait 0.1;
 	self crazy\_common::clientCmd("bind "+level.fullbrightkey +" openscriptmenu -1 fps");
 	wait 0.1;
 	self crazy\_common::clientCmd("bind "+level.knifekey +" openscriptmenu -1 giveknife");
-	
-	/*self setClientDvar( "r_filmTweakEnable", "0" );
-	self setClientDvar( "r_filmUseTweaks", "0" );
-	self setClientDvar( "r_filmtweakcontrast", "1.4" );
-	self setClientDvar( "r_lighttweaksunlight", "1" );
-	self setClientDvar( "r_filmTweakInvert", "");
-	self setClientDvar( "r_filmTweakbrightness", "0");
-	self setClientDvar( "r_filmtweakLighttint", "1.1 1.05 0.85");
-	self setClientDvar( "r_filmtweakdarktint", "0.7 0.85 1");*/
-			
+
 }
 ToggleBinds()
 {
@@ -494,7 +416,7 @@ ToggleBinds()
 				self setstat(3155,1); 
 				self.pers["so_killcard"] = 1;
 				self setClientDvar( "so_killCardSample", "killcard_sl" );
-				self setClientDvar( "so_killcardName", "Mother Sri Lanka Kill-Card" );
+				self setClientDvar( "so_killcardName", "SL KillCard" );
 				duffman\_killcard::setDesign("blue");
 			}
 			else if (self.pers["so_killcard"] == 1)

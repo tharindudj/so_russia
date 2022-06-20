@@ -185,7 +185,7 @@
 			forecolor		1 1 1 0.9
 			border			1
 			bordercolor		0 0 0 1
-			visible			1
+			visible			0
 			onFocus
 			{
 				play "so_mouse_over";

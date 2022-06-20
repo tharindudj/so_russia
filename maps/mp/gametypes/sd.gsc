@@ -468,7 +468,7 @@ intoSpawn(originA, anglesA)
 	if (roundspl==0)
 	{
 		//self iPrintLnBold( "^1Hi ^6"+self.name );
-		//thread maps\mp\gametypes\_hud_message::oldNotifyMessage( "^1SO RUSSIA ^3PROMOD^2LIVE", "www.so-russia.tk", undefined, (0.88627, 0.40321, 0.16078),6 );
+		//thread maps\mp\gametypes\_hud_message::oldNotifyMessage( "^1SO RUSSIA ^3PROMOD^2LIVE", "~https://discord.gg/4etcmpMvww~", undefined, (0.88627, 0.40321, 0.16078),6 );
 		self thread TextME(self, "^1Welcome ^7"+self.name+"^1!","^7SO RUSSIA ^7Promod Server", (1,0,0));
 		self playLocalSound("welcome");
 

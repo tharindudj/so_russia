@@ -1723,7 +1723,7 @@
 			rect		-135 -60 1 1 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
 			origin		0 0
 			forecolor	1 1 1 0.8
-			exp text	( "^7Join with Us : www.so-russia.tk" );
+			exp text	( "^7Join with Us : discord.gg/4etcmpMvww" );
 			textfont	UI_FONT_OBJECTIVE
 			textscale	0.24
 			textalign	ITEM_ALIGN_CENTER
@@ -1881,7 +1881,7 @@
             textAlign                 ITEM_ALIGN_TOP_LEFT
             textScale                 0.25
             textStyle                 ITEM_TEXTSTYLE_SHADOWED
-            exp                       text ( "> ^7Join our TeamSpeak3 ^1so-russia.tk"  );
+            exp                       text ( "> ^7Join our VK : vk.com/sorussiacod4"  );
             visible                   when ( ( ( dvarint( "so_newUI" ) == 1 ) ) )
             decoration                
         }

@@ -127,7 +127,7 @@ main()
 		setDvar( "class_assault_limit", 64 );
 		setDvar( "class_specops_limit", 64 );
 		setDvar( "class_demolitions_limit", 64 );
-		setDvar( "class_sniper_limit", 64 );
+		setDvar( "class_sniper_limit", 8 );
 		
 		setDvar( "class_assault_allowdrop", 1 );
 		setDvar( "class_specops_allowdrop", 1 );
@@ -139,7 +139,7 @@ main()
 		setDvar( "class_assault_limit", 64 );
 		setDvar( "class_specops_limit", 64 );
 		setDvar( "class_demolitions_limit", 64 );
-		setDvar( "class_sniper_limit", 64 );
+		setDvar( "class_sniper_limit", 8 );
 		
 		setDvar( "class_assault_allowdrop", 1 );
 		setDvar( "class_specops_allowdrop", 1 );
@@ -292,8 +292,8 @@ main()
 	setDvar( "promod_mc_loopdelay", 40 ); // [1->] (delay in seconds until it starting over)
 	setDvar( "promod_mc_maxmessages", 7 ); // [1->] (set this equivalent to number of messages)
 	setDvar( "promod_mc_message_1", "^2WELCOME TO  ^1SO RUSSIA ^2PROMODLIVE" );
-	setDvar( "promod_mc_message_2", "^4Owner: ^6|SO|GeRmaJax, ^2|SO|Vani$imu$" );
-	setDvar( "promod_mc_message_3", "^7Mod by ^0Frames" );
+	setDvar( "promod_mc_message_2", "^4Owner: ^6|SO|GeRmaJax, ^2|SO|Vani$imu$, ^0|^7EN^0| Frames" );
+	setDvar( "promod_mc_message_3", "^7Mod by ^4Frames" );
 	setDvar( "promod_mc_message_4", "^7Group : https://vk.com/sorussiacod4" );
 	setDvar( "promod_mc_message_5", "^7Server Owned : ^1|SO| ^7Russia" );
 	setDvar( "promod_mc_message_6", "^2Developed ^3By ^5Team EN" );
