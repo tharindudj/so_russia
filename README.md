@@ -7,7 +7,12 @@ SO Russia Promod
     /promod/
     /duffman/
     /frames/
+    /braxi/
+    /crazy/
+    /promod/
+    /promod_rulset/
     /code/
+    /plugins/
     /.gsc files
     /server.cfg
     /mod.ff
