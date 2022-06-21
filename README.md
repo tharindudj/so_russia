@@ -6,9 +6,10 @@ SO Russia Promod
     /maps/
     /promod/
     /duffman/
-    /scripts/
-    /server binary
-    /config.cfg
+    /frames/
+    /code/
+    /.gsc files
+    /server.cfg
     /mod.ff
     / .iwd files, depending how you split the assets
 
